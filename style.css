@@ -1,0 +1,93 @@
+body{
+    background-color: pink;
+}
+
+#pic{
+    position:absolute;
+    top:50%;
+    left:50%;
+}
+
+#letter{
+    width:300px;
+    height:200px;
+    background-color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+#newM{
+    position:absolute;
+    top:150%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+button{
+    cursor: pointer;
+}
+
+
+/*style for the open letter that i cannot figure out for the life of me*/
+/* #oLetter{
+    width: 300px;
+    height: 300px;
+    background: red;
+    clip-path: polygon(30% 150%, 50% 0%, 100% 100%);
+} */
+
+#icons1{
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+#icons2{
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+#heart {
+    width: 100px;
+    height: 90px;
+    position:absolute;
+    top:35%;
+    left:35%;
+}
+  
+#heart::before, #heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 42px;
+    height: 70px;
+    border-radius: 50px 50px 0 0;
+    background: red;
+}
+  
+#heart::before {
+    left: 40px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+  
+#heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+#heart:hover{
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 480px){
+    #pic{
+        width: 300px;
+        height: 150px;
+        top:60%;
+        left:50%;
+    }
+}
