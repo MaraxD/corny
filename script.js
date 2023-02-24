@@ -1,27 +1,45 @@
 let svg=document.querySelector('#flaps')
 
-let letter=document.querySelector('#letter')
-let letterH=letter.offsetHeight
-let letterW=letter.offsetWidth
-
-let line1=document.createElementNS("http://www.w3.org/2000/svg", 'line'),
+let letter=document.querySelector('#letter'),
+    letterH=letter.offsetHeight,
+    letterW=letter.offsetWidth,
+    line1=document.createElementNS("http://www.w3.org/2000/svg", 'line'),
     line2=document.createElementNS("http://www.w3.org/2000/svg", 'line')
-line1.setAttribute('style','stroke: black;stroke-width:5px')
-line1.setAttribute('x1',0)
-line1.setAttribute('y1',0)
-line1.setAttribute('x2',letterW/2)
-line1.setAttribute('y2',letterH/2)
 
-line2.setAttribute('style','stroke: black;stroke-width:5px')
-line2.setAttribute('x1',letterW)
-line2.setAttribute('y1',0)
-line2.setAttribute('x2',letterW/2)
-line2.setAttribute('y2',letterH/2)
+function reloadC(){
+   
+    line1.setAttribute('style','stroke: black;stroke-width:5px')
+    line1.setAttribute('x1',0)
+    line1.setAttribute('y1',0)
+    line1.setAttribute('x2',letterW/2)
+    line1.setAttribute('y2',letterH/2)
 
-svg.appendChild(line1)
-svg.appendChild(line2)
+    line2.setAttribute('style','stroke: black;stroke-width:5px')
+    line2.setAttribute('x1',letterW)
+    line2.setAttribute('y1',0)
+    line2.setAttribute('x2',letterW/2)
+    line2.setAttribute('y2',letterH/2)
 
-let heart=document.getElementById('heart'), k=70
+    svg.appendChild(line1)
+    svg.appendChild(line2)
+}
+
+window.addEventListener('load',(e)=>{
+    reloadC()
+})
+
+
+let heart=document.getElementById('heart'), k
+
+function clickable(btn){
+    btn.addEventListener('click',(e)=>{
+        //se revine la starea initiala
+        letter.removeChild(document.getElementById('pic'))
+        letter.removeChild(btn)
+        reloadC()
+    })
+}
+
 
 function getOut(){
     let pic=document.getElementById('pic')
@@ -41,18 +59,16 @@ function getOut(){
         pic.setAttribute('height',350)
         pic.setAttribute('width',600)
         pic.style.transform=`translate(-50%,-68%)`
+
         let btn=document.createElement('button')
         btn.innerHTML='mai da mi o mema'
         btn.setAttribute('id','newM')
         document.getElementById('letter').append(btn)
+
+        clickable(btn)
     }
 }
 
-let btnM=document.getElementById('newM')
-btnM.addEventListener('click',(e)=>{
-    //se revine la starea initiala
-    
-})
 
 heart.addEventListener('click',(e)=>{
     svg.removeChild(line1)
@@ -93,9 +109,10 @@ heart.addEventListener('click',(e)=>{
 
     letter.appendChild(meme)
     
+    k=70
     getOut()
     
-   
-
-
 })
+
+
+
