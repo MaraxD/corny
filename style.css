@@ -8,6 +8,19 @@ body{
     left:50%;
 }
 
+#text{
+    position:absolute;
+    top:30%;
+    left:38%;
+}
+
+#letterI{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
 #letter{
     width:300px;
     height:200px;
@@ -20,7 +33,7 @@ body{
 
 #newM{
     position:absolute;
-    top:150%;
+    top:120%;
     left:50%;
     transform:translate(-50%,-50%);
 }
@@ -38,15 +51,71 @@ button{
     clip-path: polygon(30% 150%, 50% 0%, 100% 100%);
 } */
 
-#icons1{
-    margin-top: 100px;
-    margin-left: 20px;
+/* carte */
+
+
+/* chess */
+#icon2{
+    position: absolute;
+    top:80%;
+    left:10%;
 }
 
-#icons2{
-    margin-top: 60px;
-    margin-left: 60px;
+/* coffee */
+#icon3{
+    position: absolute;
+    top:10%;
+    left:70%;
 }
+
+/* kira */
+#icon4{
+    position: absolute;
+    top:10%;
+    left:10%;
+}
+
+/* bloom */
+#icon5{
+    position: absolute;
+    top:80%;
+    left:60%;
+}
+
+/* wine */
+#icon6{
+    position: absolute;
+    top:67%;
+    left:40%;
+}
+
+/* coffee */
+#icon7{
+    position: absolute;
+    top:47%;
+    left:0%;
+}
+
+/* kira */
+#icon8{
+    position: absolute;
+    top:57%;
+    left:80%;
+}
+
+/* wine */
+#icon9{
+    position: absolute;
+    top:0%;
+    left:40%;
+}
+
+#letterT{
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+}
+
 
 #heart {
     width: 100px;
@@ -85,9 +154,7 @@ button{
 
 @media screen and (max-width: 480px){
     #pic{
-        width: 300px;
-        height: 150px;
-        top:60%;
+        top:65%;
         left:50%;
     }
-}
+} 
