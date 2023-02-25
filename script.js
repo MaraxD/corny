@@ -14,6 +14,8 @@ let newLine1=document.createElementNS("http://www.w3.org/2000/svg", 'line'),
 
 
 function reloadC(){
+
+    document.getElementById('heart').removeAttribute('hidden')
     line1.setAttribute('style','stroke: black;stroke-width:5px')
     line1.setAttribute('x1',0)
     line1.setAttribute('y1',0)
@@ -37,11 +39,10 @@ function reloadC(){
     //svg.removeChild(document.getElementById('newLine2'))
 }
 
-//TODO: trebuie sa se miste aleator nu toate in acelasi timp
 function animate(){
     let icons=document.getElementsByClassName('icon')
     for(let i=0;i<icons.length-1;i++){
-        if(!(icons[i].style.transform)||icons[i].style.transform==='rotate(-10deg)'){
+        if(!(icons[i].style.transform)||!(icons[i+1].style.transform)||icons[i].style.transform==='rotate(-10deg)'){
             icons[i].style.transform='rotate(10deg)'
             icons[i+1].style.transform='rotate(-10deg)'
         }else{
@@ -155,7 +156,7 @@ heart.addEventListener('click',(e)=>{
 
     
     // generare random meme
-    let number=Math.floor(Math.random()*5)+1
+    let number=Math.floor(Math.random()*6)+1
 
     let meme=document.createElement('img')
     meme.setAttribute('id','pic')
@@ -185,12 +186,9 @@ heart.addEventListener('click',(e)=>{
     letterI.appendChild(tri2)
 
     k=33.3
-    //the heart disappears (TODO: ceva mai smooth, ca si cand s ar desface)
+    document.getElementById('heart').setAttribute('hidden','true')
     openLetter()
 
-    
-    
-    
     
 })
 

@@ -1,13 +1,14 @@
 body{
     background-color: #ffc0cb;
+    font-size: 16px;
 }
 
 #txtBox{
     position:absolute;
-    top:40%;
+    top:35%;
     left:10%;
     right: 10%;
-    padding: 10px 10px 10px 10px;
+    padding: 40px 10px 30px 10px;
     border:3px solid #ef8395;
     border-radius: 35px;
     text-align: center;
@@ -21,13 +22,15 @@ body{
 
 #moon2{
     position:absolute;
-    top:70%;
+    top:75%;
     right: 50%;
 }
 
 #next{
+    padding-top:5px;
+    padding-bottom: 5px;
     border-radius: 25px;
-    margin-top: 10px;
+    margin-top: 20px;
 
 }
 
@@ -39,7 +42,7 @@ body{
 
 #text{
     position:absolute;
-    top:30%;
+    top:25%;
     left:38%;
 }
 
@@ -71,29 +74,17 @@ button{
     cursor: pointer;
 }
 
-
-/*style for the open letter that i cannot figure out for the life of me*/
-/* #oLetter{
-    width: 300px;
-    height: 300px;
-    background: red;
-    clip-path: polygon(30% 150%, 50% 0%, 100% 100%);
-} */
-
-/* carte */
-
-
 /* chess */
 #icon2{
     position: absolute;
-    top:80%;
+    top:65%;
     left:10%;
 }
 
 /* coffee */
 #icon3{
     position: absolute;
-    top:10%;
+    top:25%;
     left:70%;
 }
 
@@ -101,7 +92,7 @@ button{
 #icon4{
     position: absolute;
     top:10%;
-    left:10%;
+    left:15%;
 }
 
 /* bloom */
@@ -136,7 +127,26 @@ button{
 #icon9{
     position: absolute;
     top:0%;
-    left:40%;
+    left:58%;
+}
+
+/* wine */
+#icon10{
+    position: absolute;
+    top:0%;
+    left:0%;
+}
+
+#icon11{
+    position: absolute;
+    top:85%;
+    left:20%;
+}
+
+#icon12{
+    position: absolute;
+    top: 32%;
+    left:35%;
 }
 
 #letterT{
